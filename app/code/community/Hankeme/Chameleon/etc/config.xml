@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!--
+/**
+* HANKEME
+*
+* NOTICE OF LICENSE
+*
+* This source file is exclusively published under the Open Software License (OSL 3.0)
+* See http://opensource.org/licenses/osl-3.0.php for Details
+* In case of questions regarding the use of this source file please
+refer to the contact below.
+*
+* @project: [HANKEME Chameleon]
+* @contact: info@hankeme.de
+* @collaborators: [strohmeier]
+*/
+-->
+<config>
+    <modules>
+        <Hankeme_Chameleon>
+            <version>0.1.0</version>
+        </Hankeme_Chameleon>
+    </modules>
+    <global>
+    	<models>
+            <hankeme_chameleon>
+                <class>Hankeme_Chameleon_Model</class>
+		<resourceModel>hankeme_chameleon_resource_eav_mysql4</resourceModel>
+            </hankeme_chameleon>
+        </models>
+	<helpers>
+	    <chameleon><class>Hankeme_Chameleon_Helper</class></chameleon>
+            <hankeme_chameleon><class>Hankeme_Chameleon_Helper</class></hankeme_chameleon>
+        </helpers>
+        <blocks>
+           <hankeme_chameleon>
+                <class>Hankeme_Chameleon_Block</class>
+            </hankeme_chameleon>
+        </blocks>
+        <resources>
+            <chameleon_setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </chameleon_setup>
+            <chameleon_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </chameleon_write>
+            <chameleon_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </chameleon_read>
+        </resources>
+    </global>
+    <adminhtml>
+    	<acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <chameleon>
+                                            <title>Administer Hankeme_Chameleon</title>
+                                        </chameleon>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+			<chameleon translate="title" module="hankeme_chameleon"><!-- this tag matches the menu tag, and the same for his children -->
+		            <title>Template Editor</title>
+		            <children>
+		                <skin>
+		                    <title>Access Skin Files</title>
+		                </skin>
+				<design>
+		                    <title>Access Template &amp; Layout Files Files</title>
+		                </design>
+		            </children>
+		        </chameleon>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+	 <layout>
+        	<updates>
+        		<chameleon>
+        			<file>hankeme_chameleon.xml</file>
+        		</chameleon>
+        	</updates>
+        </layout>
+        <translate>
+            <modules>
+                <Hankeme_Chameleon>
+                    <files>
+                        <default>Hankeme_Chameleon.csv</default>
+                    </files>
+                </Hankeme_Chameleon>
+            </modules>
+        </translate>
+        <css>
+            <browser>
+                <dirs>
+                    <exclude/>
+                    <include/>
+                </dirs>
+                <extensions>
+                    <allowed>
+			<sass>1</sass>
+			<txt>1</txt>
+                        <css>1</css>
+                        <js>1</js>
+                    </allowed>
+                    <image_allowed>
+                        <jpg>1</jpg>
+                        <jpeg>1</jpeg>
+                        <png>1</png>
+                        <gif>1</gif>
+			<ico>1</ico>
+                    </image_allowed>
+                    <media_allowed>
+                        <flv>1</flv>
+                        <swf>1</swf>
+                        <avi>1</avi>
+                        <mov>1</mov>
+                        <rm>1</rm>
+                        <wmv>1</wmv>
+                    </media_allowed>
+                </extensions>
+            </browser>
+        </css>
+        <design>
+            <browser>
+                <dirs>
+                    <exclude/>
+                    <include/>
+                </dirs>
+                <extensions>
+                    <allowed>
+			<xml>1</xml>
+			<phtml>1</phtml>
+			<txt>1</txt>
+			<html>1</html>
+			<csv>1</csv>
+                    </allowed>
+                </extensions>
+            </browser>
+        </design>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <hankeme_chameleon before="Mage_Adminhtml">Hankeme_Chameleon_Adminhtml</hankeme_chameleon>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config> 

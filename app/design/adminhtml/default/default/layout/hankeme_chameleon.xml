@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+* HANKEME
+*
+* NOTICE OF LICENSE
+*
+* This source file is exclusively published under the Open Software License (OSL 3.0)
+* See http://opensource.org/licenses/osl-3.0.php for Details
+* In case of questions regarding the use of this source file please
+refer to the contact below.
+*
+* @project: [HANKEME Chameleon]
+* @contact: info@hankeme.de
+* @collaborators: [strohmeier]
+*/
+-->
+<layout>
+    <adminhtml_chameleon_skin_index>
+	<reference name="head">
+                <action method="setTitle" translate="title"><title>Edit Skin Files</title></action>
+		<action method="addJs"><script>extjs/ext-tree.js</script></action>
+		<action method="addJs"><script>hankeme/chameleon/chameleon.js</script></action>
+                <action method="addItem"><type>js_css</type><name>extjs/resources/css/ext-all.css</name><params/></action>
+                <action method="addItem"><type>js_css</type><name>extjs/resources/css/ytheme-magento.css</name><params/></action>
+                <action method="addCss"><name>hankeme/chameleon.css</name></action>
+	</reference>
+       <reference name="left">
+            <block type="adminhtml/store_switcher" name="store_switcher" before="-"></block>
+            <block type="hankeme_chameleon/adminhtml_skin_tree" name="skin_tree" template="hankeme/chameleon/skin/tree.phtml"></block>
+        </reference>
+        <reference name="content">
+            <block type="hankeme_chameleon/adminhtml_skin_edit" name="skin_edit" template="hankeme/chameleon/skin/edit.phtml"></block>
+        </reference>
+    </adminhtml_chameleon_skin_index>
+
+    <adminhtml_chameleon_skin_contents>
+        <block name="chameleon.skin.files" type="hankeme_chameleon/adminhtml_skin_edit_files" template="hankeme/chameleon/skin/edit/files.phtml" output="toHtml" />
+    </adminhtml_chameleon_skin_contents>
+
+    <adminhtml_chameleon_design_index>
+	<reference name="head">
+                <action method="setTitle" translate="title"><title>Edit Layout and Template Files</title></action>
+		<action method="addJs"><script>extjs/ext-tree.js</script></action>
+		<action method="addJs"><script>hankeme/chameleon/chameleon.js</script></action>
+                <action method="addItem"><type>js_css</type><name>extjs/resources/css/ext-all.css</name><params/></action>
+                <action method="addItem"><type>js_css</type><name>extjs/resources/css/ytheme-magento.css</name><params/></action>
+                <action method="addCss"><name>hankeme/chameleon.css</name></action>
+	</reference>
+       <reference name="left">
+            <block type="adminhtml/store_switcher" name="store_switcher" before="-"></block>
+            <block type="hankeme_chameleon/adminhtml_design_tree" name="design_tree" template="hankeme/chameleon/design/tree.phtml"></block>
+        </reference>
+        <reference name="content">
+            <block type="hankeme_chameleon/adminhtml_design_edit" name="design_edit" template="hankeme/chameleon/design/edit.phtml"></block>
+        </reference>
+    </adminhtml_chameleon_design_index>
+
+    <adminhtml_chameleon_design_contents>
+        <block name="chameleon.design.files" type="hankeme_chameleon/adminhtml_design_edit_files" template="hankeme/chameleon/design/edit/files.phtml" output="toHtml" />
+    </adminhtml_chameleon_design_contents>
+</layout>

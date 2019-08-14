@@ -1,0 +1,66 @@
+<?php
+/**
+* HANKEME
+*
+* NOTICE OF LICENSE
+*
+* This source file is exclusively published under the Open Software License (OSL 3.0)
+* See http://opensource.org/licenses/osl-3.0.php for Details
+* In case of questions regarding the use of this source file please
+refer to the contact below.
+*
+* @project: [HANKEME Chameleon]
+* @contact: info@hankeme.de
+* @collaborators: [strohmeier]
+*/
+?>
+
+<div class="chameleon-side-col">
+    <?php echo $this->getStoreSwitcherHtml();?>
+    <div class="tree-actions">
+        <a href="#" id="tree_action_collapse"><?php echo $this->__('Collapse All'); ?></a>
+        <span class="separator">|</span>
+        <a href="#" id="tree_action_expand"><?php echo $this->__('Expand All'); ?></a>
+    </div>
+<div id="tree" style="width:100%; overflow:auto;"></div>
+
+<script type="text/javascript">
+Ext.onReady(function(){
+    var Tree = Ext.tree;
+    var tree = new Tree.TreePanel('tree', {
+        animate:true,
+        loader: new Tree.TreeLoader({
+            dataUrl:'<?php echo $this->getTreeLoaderUrl() ?>'
+        }),
+        enableDD:false,
+        containerScroll: true
+    });
+
+    // set the root node
+    var root = new Tree.AsyncTreeNode({
+        text: '<?php echo $this->getRootNodeName() ?>',
+        draggable:false,
+        id:'root'
+    });
+    tree.setRootNode(root);
+
+    // render the tree
+    tree.render();
+    root.expand();
+
+    Event.observe($('tree_action_collapse'), 'click', function(){
+        tree.collapseAll();
+    });
+
+    Event.observe($('tree_action_expand'), 'click', function(){
+        tree.expandAll();
+    });
+
+    MediabrowserInstance.setTree(tree);
+    tree.addListener('click', MediabrowserInstance.selectFolder.bind(MediabrowserInstance));
+    tree.expandPath('<?php echo $this->getTreeCurrentPath() ?>','', function(success, node) {
+        MediabrowserInstance.selectFolder(node);
+    });
+});
+</script>
+</div>

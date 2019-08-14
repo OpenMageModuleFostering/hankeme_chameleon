@@ -1,0 +1,103 @@
+/**
+* HANKEME
+*
+* NOTICE OF LICENSE
+*
+* This source file is exclusively published under the Open Software License (OSL 3.0)
+* See http://opensource.org/licenses/osl-3.0.php for Details
+* In case of questions regarding the use of this source file please
+refer to the contact below.
+*
+* @project: [HANKEME Chameleon]
+* @contact: info@hankeme.de
+* @collaborators: [strohmeier]
+*/
+.chameleon_content_list .filecnt, 
+.chameleon_content_list .fileslist li {
+	display: inline-block;
+	width: 125px;
+	vertical-align:top;
+	margin:0 10px;
+}
+
+/* background images courtesy of http://filetypeicons.com */
+.chameleon_content_list .filecnt {
+	height: 110px;
+	width:85px;
+	border: none;
+	margin: 10px;
+	padding:10px;
+	cursor: pointer;
+	background-position:center top;
+	background-repeat: no-repeat;
+	background-image: url(images/chameleon_file.png);
+	background-color: transparent;
+	position:relative;
+}
+.chameleon_content_list .filecnt.chameleon-type-css {
+	background-image: url(images/chameleon_css.png);
+}
+
+.chameleon_content_list .filecnt.chameleon-type-js {
+	background-image: url(images/chameleon_js.png);
+}
+
+.chameleon_content_list .filecnt.chameleon-type-txt {
+	background-image: url(images/chameleon_text.png);
+}
+
+.chameleon_content_list .filecnt.chameleon-type-ico,
+.chameleon_content_list .filecnt.chameleon-type-jpg,
+.chameleon_content_list .filecnt.chameleon-type-jpeg,
+.chameleon_content_list .filecnt.chameleon-type-gif,
+.chameleon_content_list .filecnt.chameleon-type-png {
+	background-image: url(images/chameleon_image.png);
+}
+
+.chameleon_content_list .filecnt.chameleon-type-html,
+.chameleon_content_list .filecnt.chameleon-type-htm {
+	background-image: url(images/chameleon_html.png);
+}
+
+.chameleon_content_list .filecnt.chameleon-type-phtml {
+	background-image: url(images/chameleon_phtml.png);
+}
+
+.chameleon_content_list .filecnt.chameleon-type-xml {
+	background-image: url(images/chameleon_xml.png);
+}
+
+.chameleon_content_list .filecnt.selected,
+.chameleon_content_list .filecnt.selected + small {
+	font-weight: bold;
+}
+.chameleon_content_list .filecnt.active {
+	border: 3px solid #a6a6a6;
+}
+
+.chameleon_content_list li small {
+	display: block;
+	margin:0 0 0 0;
+	width:100%;
+	left:0;
+	text-align:center;
+	word-wrap: break-word;
+	background:transparent;
+}
+
+.chameleon_content_stage {
+	width:96%;
+	min-height:200px;
+	padding: 2%;
+}
+
+#chameleon_action_buttons {
+	display:block;
+	height: 30px;
+   	width: 100%;
+}
+
+.chameleon_hint {
+	text-align: center;
+	color: #666e73;
+}

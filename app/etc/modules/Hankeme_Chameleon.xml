@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hankeme_Chameleon>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Hankeme_Chameleon>
+    </modules>
+</config>

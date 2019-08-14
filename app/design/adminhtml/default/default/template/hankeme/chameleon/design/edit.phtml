@@ -1,0 +1,38 @@
+<?php
+/**
+* HANKEME
+*
+* NOTICE OF LICENSE
+*
+* This source file is exclusively published under the Open Software License (OSL 3.0)
+* See http://opensource.org/licenses/osl-3.0.php for Details
+* In case of questions regarding the use of this source file please
+refer to the contact below.
+*
+* @project: [HANKEME Chameleon]
+* @contact: info@hankeme.de
+* @collaborators: [strohmeier]
+*/
+?>
+<script type="text/javascript">
+//<![CDATA[
+MediabrowserInstance = new Mediabrowser(<?php echo $this->getFilebrowserSetupObject() ?>);
+MediabrowserInstance.storeId = '<?php echo $this->getStoreId() ?>';
+//]]>
+</script>
+<div class="content-header skip-header" id="content_header">
+    <table cellspacing="0">
+        <tr>
+            <td><h3 id="content_header_text"><?php echo $this->getHeaderText() ?></h3></td>
+            <td class="form-buttons">
+                <?php echo $this->getButtonsHtml() ?>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="contents" class="chameleon_content_list"></div>
+<div class="chameleon_hint"><small><?php echo $this->getFiletypeNotice();?></small></div>
+<div id="chameleon_action_buttons" class="form-buttons">
+	<?php echo $this->getActionButtonsHtml() ?>
+</div>
+<textarea id="<?php echo $this->getTargetElementId(); ?>" class="chameleon_content_stage" style="display:none"></textarea>

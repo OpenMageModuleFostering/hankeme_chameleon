@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+* HANKEME
+*
+* NOTICE OF LICENSE
+*
+* This source file is exclusively published under the Open Software License (OSL 3.0)
+* See http://opensource.org/licenses/osl-3.0.php for Details
+* In case of questions regarding the use of this source file please
+refer to the contact below.
+*
+* @project: [HANKEME Chameleon]
+* @contact: info@hankeme.de
+* @collaborators: [strohmeier]
+*/
+-->
+<config>
+    <menu>
+         <chameleon translate="title" module="hankeme_chameleon">
+            <title>Template Editor</title>
+            <sort_order>999</sort_order>
+            <children>
+                <skin translate="title" module="hankeme_chameleon">
+                    <title>Skin Files</title>
+                    <action>adminhtml/chameleon_skin/index</action>
+                    <sort_order>0</sort_order>
+                </skin>
+		<design translate="title" module="hankeme_chameleon">
+                    <title>Template &amp; Layout Files</title>
+                    <action>adminhtml/chameleon_design/index</action>
+                    <sort_order>1</sort_order>
+                </design>
+            </children>
+         </chameleon>
+    </menu>
+</config>
