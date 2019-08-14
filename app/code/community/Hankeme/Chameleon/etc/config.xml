@@ -18,7 +18,7 @@ refer to the contact below.
 <config>
     <modules>
         <Hankeme_Chameleon>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </Hankeme_Chameleon>
     </modules>
     <global>
