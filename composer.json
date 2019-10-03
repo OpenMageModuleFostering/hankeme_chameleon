@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/hankeme_chameleon",
+    "name": "OpenMageModuleFostering\/hankeme_chameleon",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL-3.0)",
     "homepage": "",
-    "description": "HANKEME CHAMELEON – SKIN & TEMPLATE EDITOR lets you edit  Skin-, Template- and Layout-Files directly via the Magento Backend.",
+    "description": "HANKEME CHAMELEON \u2013 SKIN & TEMPLATE EDITOR lets you edit  Skin-, Template- and Layout-Files directly via the Magento Backend.",
     "authors": [
-    {
-        "name": "Jan Strohmeier",
-        "email": "jan.strohmeier@hanke.me"
-    }
-],
+        {
+            "name": "Jan Strohmeier",
+            "email": "jan.strohmeier@hanke.me"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
