@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/hankeme_chameleon",
+    "name": "openmage-module-fostering\/hankeme_chameleon",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL-3.0)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "HANKEME CHAMELEON \u2013 SKIN & TEMPLATE EDITOR lets you edit  Skin-, Template- and Layout-Files directly via the Magento Backend.",
     "authors": [
